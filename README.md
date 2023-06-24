@@ -3,7 +3,7 @@
 A magical apparatus that transforms 0.5l beer cans into high-quality
 tiles for your garden shed
 
-![before-after](cans.png)
+![before-after](cans.jpg)
 
 Nominal transformation rate is set at 1bps[^bps] or some 86400 tiles per day, that
 means you need to drink a little over 43 cubic meters of beer in just 24 hours
