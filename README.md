@@ -2,11 +2,13 @@
 
 **DISCLAIMER:** besides the fact you're most probably using some sort of
 computerized device to view this content, this project has nothing to do with
-Candy Crush*® (whatever that is, AFAIK not much else than yet another platform
+*Candy Crush*® (whatever that is, AFAIK not much else than yet another platform
 game providing some incentive to ignore what really matters in [Life, the
-Universe and Everything](https://www.h2g2.com/edited_entry/A550955)).
+Universe and Everything](https://www.h2g2.com/edited_entry/A550955))[^42].
 
-A magical apparatus that transforms 0.5l Beer© cans into high-quality roof
+[^42]: Two times twenty-one
+
+*can-dee-crush* is a magical apparatus that transforms 0.5l Beer© cans into high-quality roof
 tiles for your garden shed, a homeless shelter or a fancy earthship. At the
 moment, aluminium cans are readily available and cheap (unless returnable where
 you live) : at the time of this writing, a scrap dealer in Switzerland or any
@@ -16,17 +18,17 @@ cents/piece (yes, cents! not dollars) ; without the staples, this means around
 reflect sunlight back into outer space better and cheaper than any other
 material at a comparable cost (making them great against global warming : since
 they are so cheap, they are the perfect choice to cover ice floes and the
-soon-to-be-gone mountain glaciers - at this rate even mountains will be gone
+soon-to-be-gone mountain glaciers - at the current rate even mountains will be gone
 soon). They also have a great social value, since those who need homes the most
 are usually those who are most depressed and have little choice but to drink
 the cheapest Beer© available ; in a near future they will even replace *Vogon
-United*©, *Pokemon*© and *Magic : The Gathering*© cards (which are no way as
+United*©, *Pokmohon*© and *Magic : The Githoring*© cards (which are no way as
 durable nor useful) : some rare colorful patterns will *obviously* become
 collectibles and it will be very hype to display them proudly on a creepy alley
 shelter, turning that very same alley into something so much better than
-London's *Tate Modern* or New York's *Ultimate Museum Of Modern Art*. The
+New York's *Tate Modern* or London's *Ultimate Museum Of Modern Art*. The
 prophecy will then be fulfilled as *“those who are last now will be first then,
-and those who are first will be last”* (Matthew 20:16) and even *Holy Elon*
+and those who are first will be last”* (Matthew 20:16) and even *Holy Eelon*
 will be out-of-the-game because there is no way he can catch up with drinking
 that much (and there are no breweries setup or even planned on Mars).
 
