@@ -11,7 +11,7 @@ Universe and Everything](https://www.h2g2.com/edited_entry/A550955))[^42].
 *can-dee-crush* is a magical apparatus that transforms 0.5l Beer© cans into high-quality roof
 tiles for your garden shed, a homeless shelter or a fancy earthship. At the
 moment, aluminium cans are readily available and cheap (unless returnable where
-you live) : at the time of this writing, a scrap dealer in Switzerland or any
+you live) : at the time of this writing, a scrap dealer in Shitzerland or any
 *"best democracy in the space-time continuum"* will buy them for less than 0.4
 cents/piece (yes, cents! not dollars) ; without the staples, this means around
 50¢/m² for a roof tiling that is durable, hail-proof, colorful and will even
@@ -22,7 +22,7 @@ soon-to-be-gone mountain glaciers - at the current rate even mountains will be g
 soon). They also have a great social value, since those who need homes the most
 are usually those who are most depressed and have little choice but to drink
 the cheapest Beer© available ; in a near future they will even replace *Vogon
-United*©, *Pokmohon*© and *Magic : The Githoring*© cards (which are no way as
+United*©, *Pokmohon*© and *Magic : The Glithering*© cards (which are no way as
 durable nor useful) : some rare colorful patterns will *obviously* become
 collectibles and it will be very hype to display them proudly on a creepy alley
 shelter, turning that very same alley into something so much better than
@@ -30,7 +30,7 @@ New York's *Tate Modern* or London's *Ultimate Museum Of Modern Art*. The
 prophecy will then be fulfilled as *“those who are last now will be first then,
 and those who are first will be last”* (Matthew 20:16) and even *Holy Eelon*
 will be out-of-the-game because there is no way he can catch up with drinking
-that much (and there are no breweries setup or even planned on Mars).
+that much (and there are no breweries setup or even planned on Venus).
 
 ![before-after](cans.jpg)
 
@@ -54,7 +54,7 @@ the Beer© flows through 50cl cans, it can be assumed that a single machine woul
 be sufficient to deal with the Earth's entire production. Moreover, by properly
 serializing the input channel, a capacity of roughly 100 cans/second[^100] is
 probably a reasonable goal (but then there wouldn't be enough such cans
-produced worldwide)
+produced planetwide)
 
 
 Cheers!
