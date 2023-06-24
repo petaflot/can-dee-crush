@@ -35,26 +35,27 @@ that much (and there are no breweries setup or even planned on Venus).
 ![before-after](cans.jpg)
 
 Nominal transformation rate was set at 1bps[^bps] or some 86400 tiles per
-galactic day, that means you need to drink a little over 43 cubic meters of
-Beer© in just 24 hours in order to saturate the device (that's almost 16 million
-liters each year) ; therefore, if the entire world Beer© consumption was to come
-out of 50cl cans, only 125 of such devices would be required to transform these
-cans into roughly 25 km² of roof surface each year but that's OK because at the
-current rate of alcoholism it would take a little more than twenty thousand
-years to cover the entire surface of the somewhat moist, definitely wandering
-piece of rock we are stuck on until futher notice.
+[planetary day](https://www.engrenage.ch/i18n/scripts/calendrier_galactique/),
+that means you need to drink a little over 43 cubic meters of Beer© in just 24
+hours in order to saturate the device (that's almost 16 million liters each
+year) ; therefore, if the entire world's Beer© consumption was to come out of
+50cl cans, only 125 of such devices would be required to transform these cans
+into roughly 25 km² of roof surface each year but that's OK because at the
+current rate of alcoholism in earthlings it would take a little more than
+twenty thousand years to cover the entire surface of the somewhat moist,
+definitely wandering piece of rock we are stuck on until futher notice.
 
 ![can-dee-crush](can-dee-crush.png)
 
 In practice and since most of the actual crushing action takes place during 60°
 of a full revolution, operation will be smoothened with a 6-cylinder
 *can-dee-crush*. Preliminary data suggests the rate can be raised to 1.6-1.8
-bps, increasing the throughput by a factor 10 or so ; since only a fraction of
-the Beer© flows through 50cl cans, it can be assumed that a single machine would
-be sufficient to deal with the Earth's entire production. Moreover, by properly
-serializing the input channel, a capacity of roughly 100 cans/second[^100] is
-probably a reasonable goal (but then there wouldn't be enough such cans
-produced planetwide)
+bps per cylinder, increasing the throughput by a factor 10 or so ; since only a
+fraction of the Beer© flows through 50cl cans, it can be assumed that a single
+machine would be sufficient to deal with the Earth's entire production and
+demand.  Moreover, by properly serializing the input channel, a capacity of
+roughly 100 cans/second[^100] is probably a reasonable goal (but then there
+wouldn't be enough such cans produced planetwide)
 
 
 Cheers!
