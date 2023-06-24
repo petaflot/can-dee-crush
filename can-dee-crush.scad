@@ -117,7 +117,9 @@ rotate([-5,-5,0])
 	translate([33,0,-1/2*g*$t*$t+x0]) color("blue") classic_long();
 	
 	// la canette qui est dans le crusher
-	anim( .2, .8, true )
+	anim( .2, .27, false )
+	translate([33,0,0]) color("blue") classic_long();
+	anim( .27, .8, true )
 	translate([33,0,0]) color("blue") classic_long();
 	
 	// la canette écrasée qui tombe hors de l'appareil
