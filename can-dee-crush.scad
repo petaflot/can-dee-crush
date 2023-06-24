@@ -29,6 +29,7 @@ use <scadlib.scad>
  *   et il faut un genre d'entonnoir à l'entrée de la machine
  * - la machine est légèrement inclinée pour que les canettes tombent pas par 
  *   la fenêtre de debug
+ *
  */
 
 fn=32;
@@ -54,6 +55,27 @@ cz=5;	// épaisseur des plaques du chassis
 cy=110;	// largeur du chassis (intérieur)
 vz=10;	// épaisseur des disques du vilebrequin
 vj=.5;	// jeu entre les disques du vilebrequin et le chassis
+
+segments=2;
+
+
+function tval(t,min,max) = .5;	// should range from 0.0 to <1.0
+function time(min, max) = ($t < min || $t > max) ? undef : tval($t,min,max);
+
+module anim(min, max, squeeze) {
+    //$a = time(segment / segments, (segment + 1) / segments, p);
+    $a = time( min, max);
+    if (!is_undef($a))
+    	if (squeeze) {
+        scale([$a,1,1])
+            children();
+	} else {
+            children();
+	}
+}
+
+
+
 // vilebrequin partiel
 module vlbrq( phase, offset, h )
 {
@@ -62,19 +84,19 @@ module vlbrq( phase, offset, h )
 		rotate([0,0,($t*360)+phase+crush_offset+180])
 		{
 			// roue dentée du haut
-			translate([0,0,-h/2+cz/2+vz/2+vj]) prism(fn, [diam_vlb, diam_vlb, vz], center=[true, true, true]);
+			translate([0,0,-h/2+cz/2+vz/2+vj]) prism(fn*2, [diam_vlb, diam_vlb, vz], center=[true, true, true]);
 			// axe de la bielle
 			translate([offset, 0, 0]) prism(fn, [10,10,h-cz-2*vj], center=[true, true, true]);
 			// roue dentée du bas
-			translate([0,0,h/2-cz/2-vz/2-vj]) prism(fn, [diam_vlb, diam_vlb, vz], center=[true, true, true]);
+			translate([0,0,h/2-cz/2-vz/2-vj]) prism(fn*2, [diam_vlb, diam_vlb, vz], center=[true, true, true]);
 		}
 		// ça c'est pour répartir les forces (couple et pression) de sorte à pas casser la machine
-		translate([diam_vlb,0,0]) rotate([0,0,-$t*360])
+		translate([diam_vlb*.75,0,0]) rotate([0,0,-$t*360*2])
 		{
 			// contre-roue dentée du haut
-			translate([0,0,-h/2+cz/2+vz/2+vj]) prism(fn, [diam_vlb, diam_vlb, vz], center=[true, true, true]);
+			translate([0,0,-h/2+cz/2+vz/2+vj]) prism(fn, [diam_vlb/2, diam_vlb/2, vz], center=[true, true, true]);
 			// contre-roue dentée du bas
-			translate([0,0,h/2-cz/2-vz/2-vj]) prism(fn, [diam_vlb, diam_vlb, vz], center=[true, true, true]);
+			translate([0,0,h/2-cz/2-vz/2-vj]) prism(fn, [diam_vlb/2, diam_vlb/2, vz], center=[true, true, true]);
 		}
 	}
 }
@@ -85,15 +107,21 @@ rotate([-5,-5,0])
 	//translate([33,0,186*2]) color("green") classic_long();
 	
 	// la canette qui tombe dans le crusher
+	anim( 0, .2, false )
 	translate([33,0,-1/2*g*$t*$t+x0]) color("blue") classic_long();
 	
 	// la canette qui est dans le crusher
-	//translate([33,0,0]) color("red") classic_long();
-	//translate([33,0,0]) color("red") classic();
+	anim( .2, .8, true )
+	translate([33,0,0]) color("blue") classic_long();
 	
 	// la canette écrasée qui tombe hors de l'appareil
 	t2=$t-.8;
-	translate([0,0,-1/2*g*t2*t2]) color("blue") prism(0,[2,103,186], center=[false,true,false]);
+	anim( .8, 1, false ) translate([0,0,-1/2*g*t2*t2]) color("blue")
+	{
+		 translate([2,0,0]) rotate([0,-90,0]) prism(fn, [66,103,2], center=[false,true,false], oblong=false);
+		 translate([0,0,66/2]) prism(0,[2,103,186-66], center=[false,true,false]);
+		 translate([2,0,186-66]) rotate([0,-90,0]) prism(fn, [66,103,2], center=[false,true,false], oblong=false);
+	}
 	
 	// gate ; empêche les canettes d'entrer au mauvais moment
 	//translate([course2/2+sin($t*360-gate_offset)*course2/2,0,186*2]) //color("#808080")
@@ -136,5 +164,5 @@ rotate([-5,-5,0])
 	
 	
 	// arbre d'entraînement
-	translate([300+diam_vlb,0,-50]) rotate([0,0,-$t*360]) color("yellow") prism($fn, [10,10,300]);
+	translate([300+diam_vlb*.75,0,-50]) rotate([0,0,-$t*360]) color("yellow") prism($fn, [10,10,300]);
 }
