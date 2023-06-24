@@ -22,7 +22,8 @@ specify).
 Anyone working for any government[^kpo] or paying any taxes to any
 government[^kpo] who desires to use or propagate this novel usage should
 immediately resign and stop paying their taxes and/or request explicit
-permission from [me](https://www.engrenage.ch/i18n/members/jczd/).
+permission from [me](https://www.engrenage.ch/i18n/members/jczd/) (and
+obviously await for an explicit permission to do so).
 
 [^kpo]: This excludes *Kongar-de-Peilz-Ø* otherwise I wouldn't be able to use
     it myself and that would be very foolish

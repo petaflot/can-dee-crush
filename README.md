@@ -11,9 +11,9 @@ warming : since they are so cheap, they are the perfect choice to cover ice
 floes and the soon-to-be-gone mountain glaciers). They also have a great social
 value, since those who need homes the most are usually those who are most
 depressed and have little choice but to drink the cheapest beer available ; in
-a near future they will even replace Pokemon© and *Magic : The Gathering* cards
-(which are no way as durable nor useful) : some rare colorful patterns will
-*obviously* become collectibles and it will be very hype to display them
+a near future they will even replace *Pokemon*© and *Magic : The Gathering*©
+cards (which are no way as durable nor useful) : some rare colorful patterns
+will *obviously* become collectibles and it will be very hype to display them
 proudly on a creepy alley shelter, turning that very same alley into something
 so much better than London's *Tate Modern* or New York's *Ultimate Museum Of
 Modern Art*. The prophecy will then be fulfilled as *“those who are last now
