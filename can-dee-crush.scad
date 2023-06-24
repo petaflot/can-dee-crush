@@ -30,6 +30,7 @@ use <scadlib.scad>
  * - la machine est légèrement inclinée pour que les canettes tombent pas par 
  *   la fenêtre de debug
  *
+ * official sountrack: `I Am Your Gummy Bear' Fanfare Ciocărlia
  */
 
 fn=32;
@@ -59,7 +60,7 @@ vj=.5;	// jeu entre les disques du vilebrequin et le chassis
 segments=2;
 
 
-function tval(t,min,max) = .5;	// should range from 0.0 to <1.0
+function tval(t,min,max) = (t-min)/(max-min);
 function time(min, max) = ($t < min || $t > max) ? undef : tval($t,min,max);
 
 module anim(min, max, squeeze) {
@@ -67,7 +68,7 @@ module anim(min, max, squeeze) {
     $a = time( min, max);
     if (!is_undef($a))
     	if (squeeze) {
-        scale([$a,1,1])
+        scale([1-$a,1,1])
             children();
 	} else {
             children();
@@ -100,6 +101,11 @@ module vlbrq( phase, offset, h )
 		}
 	}
 }
+
+// angles de déphasage
+ac=-10;	// angle du centre
+ab=30;	// angle d'en-bas
+ah=60;	// agle d'en-haut
 
 rotate([-5,-5,0])
 {
@@ -136,12 +142,12 @@ rotate([-5,-5,0])
 	//vlbrq( course2/2 );
 	
 	// crusher
-	translate([course/2+sin($t*360-35+crush_offset)*course/2,0,186-35]) color("#c0c0c0") prism(0,[100,105,70-cz-2*vj], center=[false, true, true]);
-	translate([0,0,35]) vlbrq( 35, course/2, 70 );
-	translate([course/2+sin($t*360+crush_offset)*course/2,0,186/2]) color("#a0a0a0") prism(0,[100,105,186-140-cz-2*vj], center=[false, true, true]);
-	translate([0,0,186/2]) vlbrq( 90, course/2, 186-140-2 );
-	translate([course/2+sin($t*360-60+crush_offset)*course/2,0,35]) color("#707070") prism(0,[100,105,70-cz-2*vj], center=[false, true, true]);
-	translate([0,0,186-35]) vlbrq( 60, course/2, 70 );
+	translate([course/2+sin($t*360-ab+crush_offset)*course/2,0,186-35]) color("#c0c0c0") prism(0,[100,105,70-cz-2*vj], center=[false, true, true]);
+	translate([0,0,35]) vlbrq( ab, course/2, 70 );
+	translate([course/2+sin($t*360-ac+crush_offset)*course/2,0,186/2]) color("#a0a0a0") prism(0,[100,105,186-140-cz-2*vj], center=[false, true, true]);
+	translate([0,0,186/2]) vlbrq( 90-ac, course/2, 186-140-2 );
+	translate([course/2+sin($t*360-ah+crush_offset)*course/2,0,35]) color("#707070") prism(0,[100,105,70-cz-2*vj], center=[false, true, true]);
+	translate([0,0,186-35]) vlbrq( ah, course/2, 70 );
 	
 	dt=72;	// diamètre du trou de canette
 	
