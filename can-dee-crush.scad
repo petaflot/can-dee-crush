@@ -1,4 +1,5 @@
 use <scadlib.scad>
+use <gears.scad>
 /*
  * can-di-crush : quelle tuile!
  *
@@ -33,6 +34,8 @@ use <scadlib.scad>
  * official sountrack: `I Am Your Gummy Bear' Fanfare Ciocărlia
  */
 
+$simple=false;	// simplified geometry ; show cylinders instead of full gears
+
 fn=32;
 g=9810; // mm/s²
 x0=186;
@@ -56,6 +59,7 @@ cz=5;	// épaisseur des plaques du chassis
 cy=110;	// largeur du chassis (intérieur)
 vz=10;	// épaisseur des disques du vilebrequin
 vj=.5;	// jeu entre les disques du vilebrequin et le chassis
+gap=10;	// largeur de la fente de sortie
 
 segments=2;
 
@@ -85,19 +89,19 @@ module vlbrq( phase, offset, h )
 		rotate([0,0,($t*360)+phase+crush_offset+180])
 		{
 			// roue dentée du haut
-			translate([0,0,-h/2+cz/2+vz/2+vj]) prism(fn*2, [diam_vlb, diam_vlb, vz], center=[true, true, true]);
+			translate([0,0,-h/2+cz/2+vz/2+vj]) mygear( diam_vlb/2, vz, circles=0, simple_rendering=$simple );
 			// axe de la bielle
 			translate([offset, 0, 0]) prism(fn, [10,10,h-cz-2*vj], center=[true, true, true]);
 			// roue dentée du bas
-			translate([0,0,h/2-cz/2-vz/2-vj]) prism(fn*2, [diam_vlb, diam_vlb, vz], center=[true, true, true]);
+			translate([0,0,h/2-cz/2-vz/2-vj]) mygear( diam_vlb/2, vz, circles=0, simple_rendering=$simple );
 		}
 		// ça c'est pour répartir les forces (couple et pression) de sorte à pas casser la machine
 		translate([diam_vlb*.75,0,0]) rotate([0,0,-$t*360*2])
 		{
 			// contre-roue dentée du haut
-			translate([0,0,-h/2+cz/2+vz/2+vj]) prism(fn, [diam_vlb/2, diam_vlb/2, vz], center=[true, true, true]);
+			translate([0,0,-h/2+cz/2+vz/2+vj]) mygear( diam_vlb/4, vz, simple_rendering=$simple );
 			// contre-roue dentée du bas
-			translate([0,0,h/2-cz/2-vz/2-vj]) prism(fn, [diam_vlb/2, diam_vlb/2, vz], center=[true, true, true]);
+			translate([0,0,h/2-cz/2-vz/2-vj]) mygear( diam_vlb/4, vz, simple_rendering=$simple );
 		}
 	}
 }
@@ -154,7 +158,7 @@ rotate([-5,-5,0])
 	dt=72;	// diamètre du trou de canette
 	
 	// chassis
-	translate([5,0,0]) color("orange") prism(0, [500-5,cy,cz], center=[false, true, true]);
+	translate([gap,0,0]) color("orange") prism(0, [500-gap,cy,cz], center=[false, true, true]);
 	translate([70,0,70]) color("orange") prism(0, [500-70,cy,cz], center=[false, true, true]);
 	translate([70,0,186-70]) color("orange") prism(0, [500-70,cy,cz], center=[false, true, true]);
 	translate([0,0,186]) color("orange")

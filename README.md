@@ -45,7 +45,7 @@ current rate of alcoholism in earthlings it would take a little more than
 twenty thousand years to cover the entire surface of the somewhat moist,
 definitely wandering piece of rock we are stuck on until futher notice.
 
-![can-dee-crush](can-dee-crush.png)
+[![Watch the video](can-dee-crush.png)](https://youtu.be/4RwU9sQPX7s)
 
 In practice and since most of the actual crushing action takes place during 60°
 of a full revolution, operation will be smoothened with a 6-cylinder
@@ -55,7 +55,7 @@ fraction of the Beer© flows through 50cl cans, it can be assumed that a single
 machine would be sufficient to deal with the Earth's entire production and
 demand.  Moreover, by properly serializing the input channel, a capacity of
 roughly 100 cans/second[^100] is probably a reasonable goal (but then there
-wouldn't be enough such cans produced planetwide)
+wouldn't be enough such cans produced planetwide).
 
 
 Cheers!
@@ -67,7 +67,16 @@ Cheers!
 
 ### Hardware
 
-**Lots** of Beer© cans
+* **Lots** of Beer© cans
+* a number of ball bearings (optional but highly recommended)
+* for durability, it is suggested to use the following materials for the build[^material]:
+    * chassis: aluminium plate, preferably the same thickness as the ball bearings ; welding is the preferred method of assembly
+    * crushing shoes: hard wood or massive aluminium, eventually bronze ; in case of aluminium it is imperative to add some low friction spacer such as PTFE
+    * gears: brass or bronze (zero twist allows for laser or waterjet cutting)
+    * axles: steel, preferably stainless
+* steel springs 
+
+[^material]: parts must be designed accordingly
 
 
 ### Software
